@@ -42,3 +42,18 @@ class LinearSVM:
         """
         linear_output = np.dot(X, self.w) - self.b
         return np.sign(linear_output)
+# Example usage
+X = np.array([
+    [2, 3],
+    [1, 1],
+    [2, 1],
+    [3, 2]
+])
+
+y = np.array([1, -1, -1, 1])
+
+svm = LinearSVM()
+svm.fit(X, y)
+
+predictions = svm.predict(X)
+print("Predictions:", predictions)
